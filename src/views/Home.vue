@@ -1,20 +1,18 @@
 <template>
   <div class="home">
-    <!-- <div class="top">
-      <p>重点学生日周考成绩录入管理系统</p>
-    </div> -->
-    <!-- <div class="cont"></div> -->
+    <img alt="Vue logo" src="../assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-//import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 
 export default Vue.extend({
   name: 'home',
   components: {
-   
+    HelloWorld,
   },
   created(){
     // 变量限制
@@ -78,26 +76,3 @@ export default Vue.extend({
   }
 });
 </script>
-<style lang="scss" scoped>
-.home {
-  width: 100%;
-  height: 100%;
-}
-.top {
-  width: 100%;
-  height: 100px;
-  background: #3F51B5;
-  p {
-    text-align: center;
-    line-height: 100px;
-    color: white;
-    font-size: 20px
-  }
-}
-.cont {
-  width: 499px;
-  height: 471px;
-  border: 1px solid #ccc;
-  margin: 144px auto; 
-}
-</style>

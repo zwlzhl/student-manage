@@ -1,38 +1,29 @@
 <template>
   <div id="app">
     <div id="nav">
-      <Home />
-      <!-- <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>-->
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
     </div>
-    <!-- <router-view /> -->
+    <router-view/>
   </div>
 </template>
-<script lang="ts">
-import Vue from "vue"
-import Home from '@/views/Home';
-export default Vue.extend({
-  components: {
-    Home
-  }
-});
-</script>
+
 <style lang="scss">
-* {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box;
-}
-html, 
-body,
 #app {
-  width: 100%;
-  height: 100%;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
 #nav {
-  width: 100%;
-  height: 100%;
+  padding: 30px;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>
