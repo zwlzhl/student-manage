@@ -1,78 +1,132 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <header>重点学生日周考成绩录入管理系统</header>
+    <div class="login">
+      <p class="name">网站工程</p>
+      <div class="tit">
+        <span class="active">登入</span>
+        <span>注册</span>
+      </div>
+      <input type="text" placeholder="牛牛虎/电话" />
+      <input type="password" placeholder="输入密码" />
+      <div class="check">
+        <input type="checkbox" />
+        <span>两周内自动登入</span>
+      </div>
+      <button>登入</button>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import Vue from "vue";
+import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 
 export default Vue.extend({
-  name: 'home',
+  name: "home",
   components: {
-    HelloWorld,
-  },
-  created(){
-    // 变量限制
-    let a:any = '100';
-
-    // a.a();
-
-    let list: object[] = [{}, {}, {}];
-    let list2: Array<number> = [1, 2, 3];
-  
-    // 函数限制
-    function func(a:any, b:any, c?:any): number{
-      return 100;
-    }
-
-    func(1, 2);
-
-    // 自定义数据结构
-    interface ReduceItem{
-      class: string,
-      weight: number,
-      romm?: number 
-    }
-
-    let classes: Array<ReduceItem> = [{
-      class: '1612B',
-      weight: 500
-    }, {
-      class: '1612A',
-      weight: 400
-    }, {
-      class: '1612C',
-      weight: 499
-    }]
-
-    classes.sort((a:ReduceItem, b:ReduceItem)=>a.weight-b.weight);
-    console.log('classes...', classes);
-
-     // 泛型
-    function minValue<T>(arrs: T[]): T{
-      if (typeof arrs[0] == 'string'){
-        arrs.sort((a:any, b:any)=>a-b);
-        return arrs[0];
-      }else if(typeof arrs[0] == 'number'){
-        arrs.sort((a:any, b:any)=>a-b);
-        return arrs[0];
-      }else if(typeof arrs[0] == 'object'){
-        arrs.sort((a:any, b:any)=>a.weight-b.weight);
-        return arrs[0];
-      }else{
-        return arrs[0];
-      }
-    }
-    
-    console.log(minValue([1,2,3,4,5,6]));
-
-    console.log(minValue(['a','b','c','4','5','6']));
-
-    console.log(minValue(classes))
-    
+    HelloWorld
   }
 });
 </script>
+
+<style scoped lang="scss">
+@media screen and (max-width: 376px) {
+  .home {
+    width: 100%;
+    height: 100%;
+    header {
+      background: red;
+      font-size: 14px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      color: white;
+      // background: #3f51b5;
+    }
+  }
+}
+.home {
+  width: 100%;
+  height: 100%;
+  header {
+    font-size: 20px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    color: white;
+    background: #3f51b5;
+  }
+}
+.login {
+  width: 280px;
+  height: 250px;
+  position: fixed;
+  left: 50%;
+  top: 47%;
+  z-index: 11;
+  margin: -125px 0 0 -140px;
+  border: 1px solid #ccc;
+  > input {
+    width: 80%;
+    height: 35px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    font-size: 11px;
+    text-indent: 7px;
+    color: rgb(241, 235, 235);
+  }
+}
+.name {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: black;
+}
+.tit {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  span {
+    display: inline-block;
+    font-size: 12px;
+    color: #777;
+    width: 40px;
+    text-align: center;
+    height: 30px;
+    border-bottom: 1px solid #999;
+  }
+  .active {
+    color: #3f51b5;
+    border-bottom: 2px solid #3f51b5 !important;
+  }
+}
+.check {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  > input {
+    position: absolute;
+    left: 28px;
+    width: 15px;
+    height: 15px;
+    margin-top: 12px;
+  }
+  > span {
+    line-height: 40px;
+    margin-left: -85px;
+    font-size: 12px;
+    color: #333;
+  }
+}
+button{
+  width: 80%;
+  border-radius: 3px;
+  background: #364bc4;
+  border:none;
+  height: 30px;
+  line-height: 30px;
+  color: white;
+}
+</style>
