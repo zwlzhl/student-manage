@@ -55,6 +55,7 @@ import echarts from "echarts";
 import "echarts/dist/echarts.min.js";
 
 export default {
+  name: "chares",
   props: {},
   components: {},
   data() {

@@ -4,8 +4,8 @@
     <div class="login">
       <p class="name">网站工程</p>
       <div class="tit">
-        <span class="active">登入</span>
-        <span>注册</span>
+        <span :class="flag ===1 ?'active' : ''" @click="logind">登入</span>
+        <span @click="registere" :class="flag ===2 ?'active' : ''">註册</span>
       </div>
       <input type="text" placeholder="牛牛虎/电话" />
       <input type="password" placeholder="输入密码" />
@@ -13,7 +13,8 @@
         <input type="checkbox" />
         <span>两周内自动登入</span>
       </div>
-      <button>登入</button>
+      <button v-if="flag === 1">登入</button>
+      <button v-if="flag === 2">注册</button>
     </div>
   </div>
 </template>
@@ -24,8 +25,21 @@ import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 
 export default Vue.extend({
   name: "home",
+  data() {
+    return {
+      flag: 1
+    }
+  },
   components: {
     HelloWorld
+  },
+  methods: {
+    registere() {
+      this.flag = 2
+    },
+    logind() {
+      this.flag = 1
+    }
   }
 });
 </script>

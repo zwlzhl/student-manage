@@ -9,7 +9,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: () => import('./views/Home.vue')
     },
     {
       path: '/about',
@@ -20,14 +20,14 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
     {
+      path: '/chart',
+      name: 'chart',
+      component: () => import('./views/yuan/chart.vue')
+    },
+    {
       path: '/chares',
       name: 'chares',
       component: () => import('./views/yuan/chares.vue')
-    },
-    {
-      path: '/chart',
-      name: 'chart',
-      component: () => import('./views/yuan/Chart.vue')
     }
   ]
 })

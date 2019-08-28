@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ul class="ul">
+    <ul class="home-ul">
       <li>
         <p>主页</p>
         <router-link to="/">登陆与注册</router-link>
@@ -43,7 +43,7 @@ body {
   width: 100%;
   height: 100%;
 }
-.ul {
+.home-ul {
   width: 200px;
   height: 300px;
   position: fixed;
