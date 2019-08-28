@@ -30,6 +30,50 @@ html,body{
     &.router-link-exact-active {
       color: #42b983;
     }
-  }
+@media screen and (max-width: 768px) {
+// #app{
+//       width:100%;
+//       height:100%;
+//       position:relative;
+//        #nav{
+//       z-index:99;
+//       background:#ccc;
+//       position:absolute;
+//       right:0;
+//       top:0;
+//       width:200px;
+//       height:100%;
+//       border:1px solid #ccc;
+//       text-align:center;
+//       li{
+//         padding-top:20px;
+//       }
+//     }
+
+//     }
 }
+@media screen and (min-width: 768px) and (max-width: 1200px){
+  // #app{
+  //     width:100%;
+  //     height:100%;
+  //     position:relative;
+  //      #nav{
+  //     z-index:99;
+  //     background:#ccc;
+  //     position:absolute;
+  //     right:0;
+  //     top:0;
+  //     width:200px;
+  //     height:100%;
+  //     border:1px solid #ccc;
+  //     text-align:center;
+  //     li{
+  //       padding-top:20px;
+  //     }
+  //   }
+
+  //   }
+}
+    
+   
 </style>
