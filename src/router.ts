@@ -8,9 +8,15 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'show',
+      component:() => import(/* webpackChunkName: "show" */ './views/Show.vue')
+    },
+    {
+      path: '/home',
       name: 'home',
       component: Home
     },
+    
     {
       path: '/about',
       name: 'about',
